@@ -93,8 +93,9 @@ managerList.append(m3)
 #     print(manager.ShowManagerInfo())
 
 print(Manager.managerCount)
-
+#setter
 m1.salaryManager=500000
+#getter
 for manager in managerList:
     print(manager.ShowManagerInfo())
 
