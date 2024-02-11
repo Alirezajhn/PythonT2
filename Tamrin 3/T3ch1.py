@@ -1,17 +1,20 @@
 class ProgrammingLanguageCourse:
         def __init__(self,courseName,startDateCourse,endDateCourse,teacherCourse,levelCourse):
-             self.__courseName=courseName
-             self.__startDateCourse=startDateCourse
-             self.__endDateCourse=endDateCourse
-             self.__teacherCourse=teacherCourse
-             self.__levelCourse=levelCourse
+             self._courseName=courseName
+             self._startDateCourse=startDateCourse
+             self._endDateCourse=endDateCourse
+             self._teacherCourse=teacherCourse
+             self._levelCourse=levelCourse
              self.courseSchedule=[]
+             
+        
+           
              
         def addDay(self,day):
             self.courseSchedule.append(day)
             
         def _showCourseInfo(self):
-            return f"courseName:{self.__courseName}\tstartDateCourse:{self.__startDateCourse}\tendDateCourse:{self.__endDateCourse}\tteacherCourse:{self.__teacherCourse}\tlevelCourse:{self.__levelCourse}"
+            return f"courseName:{self._courseName}\tstartDateCourse:{self._startDateCourse}\tendDateCourse:{self._endDateCourse}\tteacherCourse:{self._teacherCourse}\tlevelCourse:{self._levelCourse}"
 #-----------------------------------------------------------   
 class Python(ProgrammingLanguageCourse):
         def __init__(self, courseName, startDateCourse, endDateCourse, teacherCourse, levelCourse,pythonCode,pythonFee):
@@ -28,7 +31,7 @@ class Python(ProgrammingLanguageCourse):
             
             
         def __str__(self):
-             return f"pythonCode:{self.__pythonCode}\tcourseName:{self.__courseName}\tteacherCourse:{self.__teacherCourse}\tlevelCourse:{self.__levelCourse}\tpythonFee:{self.__pythonFee}"
+             return f"pythonCode:{self.__pythonCode}\tcourseName:{self._courseName}\tteacherCourse:{self._teacherCourse}\tlevelCourse:{self._levelCourse}\tpythonFee:{self.__pythonFee}"
 
 #-----------------------------------------------------------
 class Java(ProgrammingLanguageCourse):
@@ -46,7 +49,7 @@ class Java(ProgrammingLanguageCourse):
             
             
         def __str__(self):
-             return f"javaCode:{self.__javaCode}\tcourseName:{self.__courseName}\tteacherCourse:{self.__teacherCourse}\tlevelCourse:{self.__levelCourse}\tjavaFee:{self.__javaFee}"
+             return f"javaCode:{self.__javaCode}\tcourseName:{self._courseName}\tteacherCourse:{self._teacherCourse}\tlevelCourse:{self._levelCourse}\tjavaFee:{self.__javaFee}"
 
 #-----------------------------------------------------------
 class Php(ProgrammingLanguageCourse):
@@ -64,7 +67,7 @@ class Php(ProgrammingLanguageCourse):
             
             
         def __str__(self):
-             return f"phpCode:{self.__phpCode}\tcourseName:{self.__courseName}\tteacherCourse:{self.__teacherCourse}\tlevelCourse:{self.__levelCourse}\tphpFee:{self.__phpFee}"
+             return f"phpCode:{self.__phpCode}\tcourseName:{self._courseName}\tteacherCourse:{self._teacherCourse}\tlevelCourse:{self._levelCourse}\tphpFee:{self.__phpFee}"
 
 #-----------------------------------------------------------
 #main
@@ -92,3 +95,11 @@ print(120*"*")
 j2.showJavaInfo()
 print()
 print(120*"*")
+courseList=[]
+courseList.append(p1)
+courseList.append(p2)
+courseList.append(j1)
+courseList.append(j2)
+print("list of courses:")
+for course in courseList:
+     print(course)
