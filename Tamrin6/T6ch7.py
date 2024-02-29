@@ -9,7 +9,7 @@ for student in studentList1:
 
 for student in studentList2:
     newList2.append(student["Age"])
- 
+
 i=1 
 for list1 in (newList1,newList2):   
     listAge=collections.Counter(list1).most_common(1)
